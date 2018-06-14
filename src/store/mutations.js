@@ -1,5 +1,6 @@
 const RECOMMEND_GOODS = 'RECOMMEND_GOODS'
 const OTHER_GOODS = 'OTHER_GOODS'
+const ALL_OTHER_GOODS = 'ALL_OTHER_GOODS'
 const GOODS_DETAIL = 'GOODS_DETAIL'
 const SEARCH_RESULT = 'SEARCH_RESULT'
 const UPDATE_CART = 'UPDATE_CART'
@@ -13,6 +14,9 @@ export default {
   },
   [OTHER_GOODS] (state, res) {
     state.otherData = {...res}
+  },
+  [ALL_OTHER_GOODS] (state, res) {
+    state.allOtherData = {...res}
   },
   [GOODS_DETAIL] (state, res) {
     state.goodsDetailData = {...res}

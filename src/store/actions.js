@@ -1,4 +1,4 @@
-import {recommendData, otherData, goodsDetailData, searchResultData} from '../server/getData'
+import {recommendData, otherData, allOtherData, goodsDetailData, searchResultData} from '../server/getData'
 
 export default {
   async getRecommendData ({
@@ -8,6 +8,7 @@ export default {
     let res = await recommendData()
     commit('RECOMMEND_GOODS', res)
   },
+
   async getOtherData ({
     commit,
     state
@@ -15,6 +16,15 @@ export default {
     let res = await otherData(state.otherDataName)
     commit('OTHER_GOODS', res)
   },
+
+  async getAllOtherData ({
+    commit,
+    state
+  }) {
+    let res = await allOtherData()
+    commit('ALL_OTHER_GOODS', res)
+  },
+
   async getGoodsDetailData ({
     commit,
     state
@@ -22,6 +32,7 @@ export default {
     let res = await goodsDetailData(state.goodsId)
     commit('GOODS_DETAIL', res)
   },
+
   async getSearchResultData ({
     commit,
     state
@@ -29,15 +40,18 @@ export default {
     let res = await searchResultData()
     commit('SEARCH_RESULT', res)
   },
+
   async UserLogin ({commit}, res) {
     commit('LOGIN', res)
   },
+
   async UserLogout ({
     commit,
     state
   }) {
     commit('LOGOUT')
   },
+
   async UserName ({commit}, res) {
     commit('USERNAME', res)
   }

@@ -268,6 +268,35 @@ img {
     }
   }
 }
+.flex-block-3 {
+  display flex
+  flex-wrap wrap
+  background-color #fff
+  text-align center
+  font-size .6rem
+  li {
+    display flex
+    flex-direction column
+    justify-content center
+    flex-basis calc(33.33333% - 2px)
+    flex-shrink 0
+    height 3.8rem
+    border-bottom 1px solid rgba(0,0,0,.15)
+    &:not(:nth-child(3n)) {
+      border-right 1px solid rgba(0,0,0,.15)
+    }
+    &.no-bottom {
+      border-bottom none
+    }
+    .iconfont {
+      font-size 1rem
+      color #999
+    }
+    p {
+      margin-top .25rem
+    }
+  }
+}
 
 /*模块*/
 .mod {
@@ -278,7 +307,7 @@ img {
     padding 1rem 0  
     text-align center
     position relative
-    &before {
+    &:before {
       content ''
       display inline-block
       width 6.5rem
@@ -352,7 +381,7 @@ img {
       flex-shrink 0
       padding 0 .25rem
       margin-right 1rem
-      &.router-link-exact-active {
+      &.router-link-exact-active,&.active {
         color #b4282d
         border-bottom 1px solid #b4282d  
       }
@@ -555,6 +584,11 @@ img {
 }
 .price { 
   color #b4282d
+}
+
+/*边框*/
+.border-b {
+  border-bottom 1px solid #dfdfdf
 }
 
 /*无数据*/

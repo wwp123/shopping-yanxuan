@@ -10,6 +10,11 @@ export const otherData = (name) => axios.get('static/json/otherGoods.json').then
   return res.data[name]
 })
 
+// 首页所有其他商品等
+export const allOtherData = () => axios.get('static/json/otherGoods.json').then((res) => {
+  return res.data
+})
+
 // 搜索结果
 export const searchResultData = () => axios.get('static/json/searchResult.json').then((res) => {
   return res.data

@@ -5,6 +5,7 @@ import store from '@/store'
 import home from '@/pages/home/home.vue'
 import shop from '@/pages/shop/shop.vue'
 import classify from '@/pages/classify/classify.vue'
+import classifyDetail from '@/pages/classify/children/classifyDetail.vue'
 import cart from '@/pages/cart/cart.vue'
 import center from '@/pages/center/center.vue'
 import search from '@/pages/search/search.vue'
@@ -47,6 +48,11 @@ const router = new VueRouter({
       // 分类
       path: '/classify',
       component: classify
+    },
+    {
+      // 分类详情
+      path: '/classifyDetail',
+      component: classifyDetail
     },
     {
       // 购物车

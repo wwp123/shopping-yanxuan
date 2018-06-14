@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>我是shop</p>
+    <p>识物识物识物</p>
     <Footer></Footer>
   </div>
 </template>

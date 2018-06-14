@@ -122,33 +122,4 @@ export default {
     height 2rem
     line-height 2rem
   }
-  .flex-block-3 {
-    display flex
-    flex-wrap wrap
-    background-color #fff
-    text-align center
-    font-size .6rem
-    li {
-      display flex
-      flex-direction column
-      justify-content center
-      flex-basis calc(33.33333% - 2px)
-      flex-shrink 0
-      height 3.8rem
-      border-bottom 1px solid rgba(0,0,0,.15)
-      &:not(:nth-child(3n)) {
-        border-right 1px solid rgba(0,0,0,.15)
-      }
-      &.no-bottom {
-        border-bottom none
-      }
-      .iconfont {
-        font-size 1rem
-        color #999
-      }
-      p {
-        margin-top .25rem
-      }
-    }
-  }
 </style>

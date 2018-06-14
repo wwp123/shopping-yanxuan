@@ -95,9 +95,6 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  .border-b {
-    border-bottom 1px solid #dfdfdf
-  }
   .suggestion {
     width 100%
     height 19.5rem

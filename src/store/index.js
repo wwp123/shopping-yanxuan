@@ -9,6 +9,7 @@ Vue.use(Vuex)
 const state = {
   recommendData: {}, // 首页推荐商品信息
   otherData: {}, // 首页其他商品信息
+  allOtherData: {}, // 首页所有其他商品信息
   otherDataName: null, // 首页其他商品传入的路由参数name
   tagsHot: ['家居服特惠', '浪漫礼物2件85折', '衬衫T恤买3免1', '餐厨满199减20', '枕头', '软木拖', '四件套', '收纳'], // 热门搜索
   tagsHistory: [], // 历史搜索记录
