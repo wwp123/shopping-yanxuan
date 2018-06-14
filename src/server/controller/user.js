@@ -39,7 +39,6 @@ const findAllUsers = () => {
 // 登录
 const Login = async (ctx) => {
   // 拿到账号和密码
-  console.log(ctx)
   let username = ctx.request.body.user
   let password = encrypt(ctx.request.body.password)// 解密
   let doc = await findUser(username)
@@ -53,7 +52,6 @@ const Login = async (ctx) => {
     console.log('密码一致!')
     // 生成一个新的token,并存到数据库
     let token = createToken(username)
-    console.log(token)
     doc.token = token
     await new Promise((resolve, reject) => {
       doc.save((err) => {

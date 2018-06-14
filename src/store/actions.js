@@ -29,11 +29,8 @@ export default {
     let res = await searchResultData()
     commit('SEARCH_RESULT', res)
   },
-  async UserLogin ({
-    commit,
-    state
-  }) {
-    commit('LOGIN', state)
+  async UserLogin ({commit}, res) {
+    commit('LOGIN', res)
   },
   async UserLogout ({
     commit,
@@ -41,10 +38,7 @@ export default {
   }) {
     commit('LOGOUT')
   },
-  async UserName ({
-    commit,
-    state
-  }) {
-    commit('USERNAME', state)
+  async UserName ({commit}, res) {
+    commit('USERNAME', res)
   }
 }

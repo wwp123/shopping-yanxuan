@@ -23,16 +23,16 @@ export default {
   [UPDATE_CART] (state, res) {
     state.cartGoods = {...res}
   },
-  [LOGIN] (state, data) {
-    state.token = data
-    window.sessionStorage.setItem('token', data)
+  [LOGIN] (state, res) {
+    state.token = res
+    window.sessionStorage.setItem('token', res)
   },
   [LOGOUT] (state) {
     state.token = null
     window.sessionStorage.removeItem('token')
   },
-  [USERNAME] (state, data) {
-    state.username = data
-    window.sessionStorage.setItem('username', data)
+  [USERNAME] (state, res) {
+    state.username = res
+    window.sessionStorage.setItem('username', res)
   }
 }

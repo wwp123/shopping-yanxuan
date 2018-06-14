@@ -152,7 +152,7 @@ export default {
             this.$store.dispatch('UserLogin', token)
             this.$store.dispatch('UserName', username)
             // 跳到目标页
-            window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
+            window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/home')
           } else {
             Toast('密码错误')
           }
