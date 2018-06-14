@@ -1,0 +1,81 @@
+[
+  {
+    "id":"10201",
+    "modTitle": "家居",
+    "name": "花漾初绽四件套",
+    "descript": "独家花漾设计，纯棉透气亲肤",
+    "price": "299",
+    "imgSrc": "http://yanxuan.nosdn.127.net/787b94186d73f1a1beec72e3197c53e1.jpg?imageView&quality=65&thumbnail=330x330",
+    "tags": [
+      {
+        "class": "tag-lightyellow",
+        "name": "新品"
+      }
+    ]
+  },
+  {
+    "id":"10202",
+    "modTitle": "家居",
+    "name": "透气呼吸纱四件套",
+    "descript": "双层呼吸纱，纯棉超柔亲肤",
+    "price": "459",
+    "imgSrc": "http://yanxuan.nosdn.127.net/13f09d3de8153d9fd37796a9a7cf73fb.jpg?imageView&quality=65&thumbnail=330x330",
+    "tagColor": "3色可选"
+  },
+  {
+    "id":"10202",
+    "modTitle": "家居",
+    "name": "透气呼吸纱四件套",
+    "descript": "双层呼吸纱，纯棉超柔亲肤",
+    "price": "459",
+    "imgSrc": "http://yanxuan.nosdn.127.net/13f09d3de8153d9fd37796a9a7cf73fb.jpg?imageView&quality=65&thumbnail=330x330",
+    "tagColor": "3色可选"
+  },
+  {
+    "id":"10201",
+    "modTitle": "家居",
+    "name": "花漾初绽四件套",
+    "descript": "独家花漾设计，纯棉透气亲肤",
+    "price": "299",
+    "imgSrc": "http://yanxuan.nosdn.127.net/787b94186d73f1a1beec72e3197c53e1.jpg?imageView&quality=65&thumbnail=330x330",
+    "tags": [
+      {
+        "class": "tag-lightyellow",
+        "name": "新品"
+      }
+    ]
+  },
+  {
+    "id":"10301",
+    "modTitle": "配件",
+    "name": "20寸 纯PC“铝框”（非全铝）登机箱",
+    "descript": "40升适中容量，铝质包角，牢固抗摔",
+    "price": "349",
+    "imgSrc": "http://yanxuan.nosdn.127.net/5f6c93aceee89f6a7e169be91eeb2418.png?imageView&quality=65&thumbnail=330x330",
+    "tagColor": "9色可选",
+    "tags": [
+      {
+        "class": "tag-yellow",
+        "name": "加价购"
+      }
+    ]
+  },
+  {
+    "id":"10302",
+    "modTitle": "配件",
+    "name": "28寸 纯PC“铝框”（非全铝）拉杆箱",
+    "descript": "109升大容量，满足全家出行",
+    "price": "439",
+    "imgSrc": "http://yanxuan.nosdn.127.net/a7537ba4401f1bfee5077ba7d05beda4.png?imageView&quality=65&thumbnail=330x330",
+    "tagColor": "9色可选",
+    "tags": [
+      {
+        "class": "tag-red",
+        "name": "爆品"
+      },{
+        "class": "tag-yellow",
+        "name": "加价购"
+      }
+    ]
+  }
+]

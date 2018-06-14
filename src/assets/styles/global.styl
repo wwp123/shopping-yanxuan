@@ -1,0 +1,587 @@
+@media only screen and (min-width 360px) {
+	html{font-size 21px}
+}
+@media only screen and (min-width 375px) {
+	html{font-size 21.5px}
+}
+@media only screen and (min-width 400px) {
+	html{font-size 22.5px}
+}
+@media only screen and (min-width 414px) {
+	html{font-size 23px}
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
+  margin 0
+  padding 0
+  border 0
+  font-size 100%
+  font-weight normal
+  vertical-align baseline
+}
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display block
+}
+body {
+  line-height 1
+}
+a {
+  color #333
+  text-decoration none
+  -webkit-backface-visibility hidden
+}
+li {
+  list-style none
+}
+input:focus {
+  border none
+  outline none
+}
+html, body {
+  width 100%
+  font-size 20px
+}
+body {
+  -webkit-text-size-adjust none
+  -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+  background-color #f4f4f4
+  max-width 640px
+  margin 0 auto
+  color #333
+}
+img {
+  max-width 100%
+  vertical-align top
+}
+.over-auto {
+  overflow auto  
+}
+.show-all,.show-more {
+  display block
+  height 0
+  position relative
+  .text {
+    position absolute
+    left 50%
+    top 50%
+    transform translate(-50%,-50%)
+    text-align center
+  }
+}
+.show-all {
+  border .15rem solid #f4f4f4
+  width calc(100% - .25rem)
+  padding-bottom calc(100% - .25rem)
+  background-color #fff
+}
+.show-more {
+  padding-bottom calc(100% + 1.5rem)
+  background-color #f4f4f4
+  font-size .7rem
+  border none
+  .iconfont {
+    font-size 1.5rem  
+    color #7e8c8d
+  }
+  p {
+    white-space nowrap
+    margin-bottom 1rem
+  }
+}
+
+.title {
+  display flex
+  flex-direction column
+  justify-content center
+  height 2.3rem
+  color #333 
+  font-size .7rem
+  background-color #fff 
+  text-align center
+  p {
+    font-size .6rem
+    color #999999
+    margin-top .25rem
+    line-height 1
+  }
+  .iconfont {
+    font-size .7rem
+  }
+}
+.title.has-icon {
+  display block
+  line-height 2.3rem
+}
+.cus-title {
+  display block
+  height 5.5rem
+  margin-bottom .5rem
+  display flex
+  flex-direction column
+  justify-content center
+  text-align center
+  font-size .75rem
+  .tag-showall {
+    display inline-block
+    width 5rem
+    height 1.2rem
+    line-height 1.2rem
+    font-size .6rem  
+    margin .4rem auto 0
+    .iconfont {
+      font-size .6rem  
+    }
+  }
+  &.title-new {
+    background-image url('../images/new.png')   
+    background-size contain
+    color #8BA0B6
+    .tag-showall {
+      background-color #D8E5F1
+    }
+  } 
+  &.title-hot {
+    background-image url('../images/hot.png')   
+    background-size contain
+    color #B4A078
+    .tag-showall {
+      background-color #F4E9CB
+    }
+  } 
+}
+.nowrap {
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis  
+}
+
+.count {
+  height 1.4rem
+  line-height 1.4rem
+  display flex
+  align-items center
+  text-align center
+  span {
+    width 1.9rem 
+    border 1px solid #d9d9d9
+    font-size 1.1rem
+    color #999
+    &first-child {
+      border-right none  
+      border-radius 2px 0 0 2px
+    }
+    &last-child {
+      border-left none  
+      border-radius 0 2px 2px 0
+    }
+  }  
+  input {
+    border 1px solid #d9d9d9
+    line-height 1.4rem
+    text-align center
+    width 3rem !important
+  }
+}
+
+/*头部*/
+.topbar {
+  position relative
+  height 1.8rem
+  z-index 101
+  .logo {
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    margin auto  
+  }
+  .isFixed {
+    height 1.8rem  
+    background-color #fafafa
+    border-bottom 1px solid #ececec
+  }
+  .flex {
+    .key {
+      padding .25rem .5rem
+      position relative
+    }  
+    .info {
+      margin 0 .5rem  
+    }
+  }
+}
+
+/*布局*/
+.isFixed {
+  position fixed
+  top 0
+  left 0
+  width 100%  
+  background-color #fff
+  z-index 100
+}
+.cover {
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  background-color #ffffff
+  z-index 100
+}
+.flex {
+  display flex
+  justify-content center
+  align-items center
+  text-align center
+  font-size .6rem
+  .info {
+    flex-grow 1  
+  } 
+}
+.flex-list {
+  background-color #fff
+  padding-left .5rem
+  & > li {
+    display flex
+    width 100%
+    padding .5rem .5rem .5rem 0
+    font-size .6rem
+    line-height 1.6
+    box-sizing border-box
+    &not(first-child) {
+      border-top 1px solid #d9d9d9
+    }
+    .info {
+      flex-grow 1  
+      input {
+        width 100%
+        height 100%
+      }
+    }  
+    .key {
+      flex-shrink 0  
+    }
+    .iconfont {
+      color #7f7f7f
+      font-size .6rem
+    }
+  }
+}
+
+/*模块*/
+.mod {
+  background-color #fff
+  .mod-hd {
+    font-size .7rem
+    line-height 1
+    padding 1rem 0  
+    text-align center
+    position relative
+    &before {
+      content ''
+      display inline-block
+      width 6.5rem
+      height 1px
+      background-color #ccc
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      margin auto
+    }
+    .mod-tit {
+      padding 0 .25rem
+      background-color #ffffff
+      position relative
+      z-index 2  
+    }
+  }  
+  .mod-bd {
+    padding .5rem  
+  }
+}
+
+/*按钮*/
+.btn {
+  display inline-block
+  width 2rem
+  background-color #b4282d
+  border 1px solid #b4282d
+  font-size .6rem
+  color #fff
+  vertical-align middle
+  text-align center
+  box-sizing border-box
+}
+.btn-white {
+  background-color #fff  
+  color #333
+  border-color #fff
+}
+.btn-hollow {
+  background-color transparent
+  color #b4282d
+}
+.btn-full {
+  width 100%
+}
+.btn-small {
+  width 2.4rem
+  font-size .6rem
+  padding .15rem 0
+  border-color #7f7f7f
+  color #7f7f7f
+  background-color #fff
+  border-radius 2px  
+}
+
+/*tab*/
+.tab {
+  overflow auto
+  font-size .6rem
+  color #333
+  background-color #fff
+  height 1.2rem
+  line-height calc(1.2rem - 1px)
+  ul {
+    display flex
+    padding-left .5rem
+    li {
+      flex-shrink 0
+      padding 0 .25rem
+      margin-right 1rem
+      &.router-link-exact-active {
+        color #b4282d
+        border-bottom 1px solid #b4282d  
+      }
+    } 
+  }
+}
+
+/*图标*/
+.logo {
+  display inline-block
+  width 3rem
+  height .87rem
+  background-image url('../images/logo.png')   
+  background-size contain
+  background-repeat no-repeat
+}
+.iconfont {
+  font-size 1rem  
+}
+.gift {
+  display inline-block
+  width 2.4rem
+  height 1.7rem
+  background-image url('../images/gift.png')    
+  background-size contain
+  background-repeat no-repeat
+  position fixed
+  right 0
+  bottom 5rem
+}
+.icon-num {
+  display inline-block
+  min-width .6rem
+  height .6rem
+  border-radius 1rem
+  background-color #b4282d
+  color #fff
+  font-size .6rem
+  text-align center
+  line-height .6rem
+  position absolute
+  top 0
+  right .15rem
+}
+.footer-nav .icon-num {
+  left 50%
+  right auto
+  margin-left .25rem  
+}
+.icon-cart {
+  background-image url('../images/cart.png') 
+}
+.icon-search {
+  background-image url('../images/search.png')  
+}
+.icon-login {
+  display inline-block
+  width 5.7rem
+  height 1.9rem
+  background-image url(../images/login.png) 
+  background-size 100% 100%
+}
+
+/*搜索*/
+.search-wrap {
+  display flex
+  justify-content center
+  padding .3rem .5rem
+  background-color #fff
+  font-size .6rem
+  color #333
+  z-index 101
+  .search-btn {
+    align-self center  
+  }
+  .logo {
+    margin-right .5rem
+    align-self center
+  }  
+  .search {
+    flex-grow 1  
+    align-self center
+    height 1.2rem
+    line-height 1.2rem
+    background-color #ededed
+    border-radius 3px
+    display flex
+    justify-content center
+    cursor pointer
+    padding 0 .15rem 0 .4rem
+    .icon-sousuo {
+      font-size .65rem  
+      margin-right .25rem
+    }
+    .icon-guanbi {
+      font-size .8rem  
+      padding 0 .25rem
+      color #ccc
+    }
+    input {
+      background-color transparent
+      flex-grow 1
+    }
+  }
+  .btn-cancel {
+    margin-left .5rem 
+  }
+}
+
+/*面板*/
+.panel {
+  .panel-hd {
+    height 1.8rem
+    line-height 1.8rem
+    text-align center
+    border-bottom 1px solid #ececec
+    font-size .7rem
+    padding 0 .5rem
+  }
+  .panel-ft {
+    display flex
+    width 100%
+    height 2.2rem
+    align-items center
+    justify-content center
+    background-color #fafafa
+    border-top 1px solid #ececec
+    position fixed
+    bottom 0
+    left 0
+  }
+}
+
+/*标签*/
+.tag {
+  display inline-block
+  font-size .5rem
+  border-radius 2px
+  line-height 1
+  padding 1px .2rem
+  text-align center
+  margin 0 .25rem .25rem 0
+}
+.tag-hollow {
+  border 1px solid #b4a078
+  color #b4a078
+}
+.tag-h {
+  width .6rem
+  padding 1px 2px
+  line-height 1.3
+  position absolute
+  left .25rem
+  top .25rem
+}
+.tag-red {
+  background-color #e5686d
+  color #fff
+}
+.tag-yellow {
+  background-color #f48f18
+  color #fff
+}
+.tag-lightyellow {
+  background-color #cdb694
+  color #fff
+}
+
+/*浮动*/
+.fl {
+  float left
+} 
+.fr {
+  float right
+} 
+
+/*间距*/
+.mt10 {
+  margin-top .5rem  
+}
+.mb10 {
+  margin-bottom .5rem  
+}
+.ml10 {
+  margin-left .5rem  
+}
+.mr10 {
+  margin-right .5rem  
+}
+.pt10 {
+  padding-top .5rem  
+}
+
+/*颜色*/
+.bgc-fff {
+  background-color #fff  
+}
+.descript {
+  color #7f7f7f
+}
+.price { 
+  color #b4282d
+}
+
+/*无数据*/
+.nodata {
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%,-50%)
+  text-align center
+  width 80%
+  .icon {
+    display inline-block
+    width 5.3rem
+    height 5.3rem
+    background-size contain
+    background-repeat no-repeat
+  } 
+  p {
+    font-size .6rem
+    color #7f7f7f
+    margin-bottom .25rem
+  }
+  .btn {
+    width 10.2rem
+    height 2rem
+    line-height 2rem
+    font-size .65rem
+    margin-top 1.25rem  
+  }
+}
