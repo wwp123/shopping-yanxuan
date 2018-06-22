@@ -94,7 +94,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
   .suggestion {
     width 100%
     height 19.5rem

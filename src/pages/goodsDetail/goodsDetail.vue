@@ -216,6 +216,7 @@ export default {
       goodsNumber: 1, // 商品数量
       skuMap: {}, // 商品规格
       activeSkuVal: {}, // 选中规格
+      activeSkuId: null, // 选中规格对应id
       activeSkuPrice: '', // 选中规格对应价格
       activeSkuPic: '', // 选中规格对应图片
       isAllSelected: false // 是否全部选中
@@ -224,7 +225,8 @@ export default {
   computed: {
     ...mapState({
       goodsDetailData: state => state.goodsDetailData,
-      cartGoods: state => state.cartGoods
+      cartGoods: state => state.cartGoods,
+      token: state => state.token
     }),
     ...mapGetters(['cartGoodsNumber']),
     // 积分
@@ -299,6 +301,7 @@ export default {
         if (flag) {
           this.activeSkuPrice = value.calcPrice
           this.activeSkuPic = value.pic
+          this.activeSkuId = value.id
         }
       })
     },
@@ -306,20 +309,34 @@ export default {
     addCart (panel) {
       if (this.isAllSelected) {
         Toast('加入成功')
-        if (!this.cartGoods[this.$route.query.id]) {
-          let item = {
+        // if (!this.cartGoods[this.$route.query.id]) {
+        // let item = {[this.$route.query.id]: {
+        //   'name': this.goods.name,
+        //   'pic': this.activeSkuPic,
+        //   'price': this.activeSkuPrice,
+        //   'sku': Object.values(this.activeSkuVal).join('; '),
+        //   'num': this.goodsNumber,
+        //   'checked': true
+        // }}
+        // this.cartGoods[this.$route.query.id] = item
+        // } else {
+        //   this.cartGoods[this.$route.query.id].num += this.goodsNumber
+        // }
+        if (!this.cartGoods[this.activeSkuId]) {
+          let item = {[this.activeSkuId]: {
+            'supId': this.$route.query.id,
             'name': this.goods.name,
             'pic': this.activeSkuPic,
             'price': this.activeSkuPrice,
             'sku': Object.values(this.activeSkuVal).join('; '),
             'num': this.goodsNumber,
             'checked': true
-          }
-          this.cartGoods[this.$route.query.id] = item
+          }}
+          this.cartGoods[this.activeSkuId] = item[this.activeSkuId]
         } else {
-          this.cartGoods[this.$route.query.id].num += this.goodsNumber
+          this.cartGoods[this.activeSkuId].num += this.goodsNumber
         }
-        this.$store.commit('UPDATE_CART', this.cartGoods)
+        this.$store.dispatch('updateCart', this.cartGoods)
       } else {
         if (panel === 'sku') {
           for (let key in this.skuMap) {
@@ -357,7 +374,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
   .footer {
     height 2.2rem
     & > div {

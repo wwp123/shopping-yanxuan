@@ -52,7 +52,8 @@
 
 <script>
 import { Toast } from 'mint-ui'
-import interceptor from '@/server/interceptor.js'
+import {mapState} from 'vuex'
+import transferData from '@/tools/transferData.js'
 import topbar from '@/components/topbar.vue'
 import '@/assets/styles/login.styl'
 export default {
@@ -74,6 +75,7 @@ export default {
     }
   },
   computed: {
+    ...mapState(['cartGoods']),
     // 密码输入框类型
     inputType () {
       if (this.isShowPassword) {
@@ -140,7 +142,7 @@ export default {
     // 提交表单
     submitForm (formName) {
       if (this.validateNumber() && this.validatePsd()) {
-        interceptor.userLogin(JSON.stringify(formName)).then(({data}) => {
+        transferData.userLogin(JSON.stringify(formName)).then(({data}) => {
           if (data.info === false) {
             Toast('账号不存在')
             return
@@ -151,8 +153,9 @@ export default {
             let username = data.username
             this.$store.dispatch('UserLogin', token)
             this.$store.dispatch('UserName', username)
-            // 跳到目标页
-            window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/home')
+            this.$store.dispatch('mergeCart', this.cartGoods)
+            // 跳到首页
+            this.$router.push('/home')
           } else {
             Toast('密码错误')
           }

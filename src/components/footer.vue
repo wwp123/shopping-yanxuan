@@ -5,10 +5,10 @@
         <i class="iconfont icon-shouye"></i>
         <p>首页</p>
       </router-link>
-      <router-link to="/shop" tag="li">
+      <!-- <router-link to="/shop" tag="li">
         <i class="iconfont icon-shiwu"></i>
         <p>识物</p>
-      </router-link>
+      </router-link> -->
       <router-link to="/classify" tag="li">
         <i class="iconfont icon-fenlei"></i>
         <p>分类</p>
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
   .footer-nav {
     height 2rem
     ul {

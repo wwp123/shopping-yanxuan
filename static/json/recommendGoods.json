@@ -241,6 +241,7 @@
       "otherGoods": [
         {
           "title": "居家",
+          "modTitle": "live",
           "items": [
             {
               "id":"10201",
@@ -301,6 +302,7 @@
         },
         {
           "title": "配件",
+          "modTitle": "part",
           "items": [
             {
               "id":"10301",
@@ -382,6 +384,7 @@
         },
         {
           "title": "服装",
+          "modTitle": "clothing",
           "items": [
             {
               "id":"10401",
@@ -455,6 +458,7 @@
         },
         {
           "title": "电器",
+          "modTitle": "appliance",
           "items": [
             {
               "id":"10501",
@@ -527,6 +531,7 @@
         },
         {
           "title": "洗护",
+          "modTitle": "wash",
           "items": [
             {
               "id":"10601",
@@ -597,6 +602,7 @@
         },
         {
           "title": "饮食",
+          "modTitle": "diet",
           "items": [
             {
               "id":"10701",

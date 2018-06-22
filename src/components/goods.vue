@@ -19,12 +19,12 @@
     <a href="" class="show-all"><div class="text">查看全部</div></a>
   </li>
   <li v-if="showMore">
-    <a href="" class="show-more">
+    <div class="show-more" @click="otherGoodsList(moreRouter)">
       <div class="text">
         <p>更多{{goods.title}}</p>
         <i class="iconfont icon-xiangyou2"></i>
       </div>
-    </a>
+    </div>
   </li>
 </ul>
 </template>
@@ -34,7 +34,8 @@ export default {
   props: {
     goods: {},
     showAll: false,
-    showMore: false
+    showMore: false,
+    moreRouter: null
   },
   filters: {
     // 格式化价格
@@ -45,11 +46,17 @@ export default {
         return '￥' + price
       }
     }
+  },
+  methods: {
+    // 其他商品点击更多跳转到对应列表页
+    otherGoodsList (route) {
+      this.$router.push('/home/list?name=' + route)
+    }
   }
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
   .goods {
     background-color #fff
     font-size .6rem

@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
   .h72 {
     height 3.6rem
   }

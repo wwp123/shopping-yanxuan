@@ -48,5 +48,16 @@ export default {
   // 获取用户
   getUser () {
     return instance.get('/api/user')
+  },
+  // 合并购物车
+  mergeShoppingCart (data) {
+    return instance.post('/api/cart/merge', data)
+  },
+  // 更新购物车
+  updateShoppingCart (data) {
+    return instance.post('/api/cart/update', data)
+  },
+  getShoppingCart (data) {
+    return instance.post('/api/cart/get', data)
   }
 }

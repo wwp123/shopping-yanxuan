@@ -165,11 +165,16 @@ img {
     border 1px solid #d9d9d9
     font-size 1.1rem
     color #999
-    &first-child {
+    &.disabled {
+      pointer-events none
+      border 1px solid #e5e5e5
+      color #e5e5e5
+    }
+    &:first-child {
       border-right none  
       border-radius 2px 0 0 2px
     }
-    &last-child {
+    &:last-child {
       border-left none  
       border-radius 0 2px 2px 0
     }
@@ -249,7 +254,7 @@ img {
     font-size .6rem
     line-height 1.6
     box-sizing border-box
-    &not(first-child) {
+    &:not(first-child) {
       border-top 1px solid #d9d9d9
     }
     .info {
@@ -500,6 +505,9 @@ img {
     border-bottom 1px solid #ececec
     font-size .7rem
     padding 0 .5rem
+    .isFixed {
+      border-bottom 1px solid #ececec  
+    }
   }
   .panel-ft {
     display flex
@@ -617,5 +625,20 @@ img {
     line-height 2rem
     font-size .65rem
     margin-top 1.25rem  
+  }
+}
+
+
+.service-policy {
+  background-color #ffffff
+  font-size 0.6rem
+  display flex
+  justify-content space-evenly
+  padding 0.4rem 0
+
+  .iconfont {
+    font-size 0.6rem
+    color #b4282d
+    margin-right 0.15rem
   }
 }

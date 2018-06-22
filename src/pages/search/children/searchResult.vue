@@ -224,7 +224,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
 header {
   height 3.4rem
 }

@@ -95,7 +95,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
   .center-head {
     height 5.8rem
     background-image url(../../assets/images/center-bg.png)

@@ -19,7 +19,7 @@ const state = {
   goodsDetailData: {}, // 商品详情信息
   cartGoods: {}, // 购物车商品列表
   token: window.sessionStorage.getItem('token'), // 初始化时用sessionStore.getItem('token'),刷新页面就无需重新登录
-  username: '' // 用户名
+  username: window.sessionStorage.getItem('username') // 用户名
 }
 
 export default new Vuex.Store({

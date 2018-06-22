@@ -29,7 +29,7 @@
 
 <script>
 import { Toast } from 'mint-ui'
-import interceptor from '@/server/interceptor.js'
+import transferData from '@/tools/transferData.js'
 import topbar from '@/components/topbar.vue'
 import '@/assets/styles/login.styl'
 export default {
@@ -116,7 +116,7 @@ export default {
     // 提交表单
     submitForm (formName) {
       if (this.validateNumber() && this.validatePsd()) {
-        interceptor.userRegister(JSON.stringify(formName)).then(({data}) => {
+        transferData.userRegister(JSON.stringify(formName)).then(({data}) => {
           if (data.success) {
             Toast('注册成功')
             this.$router.push('/login')
@@ -130,7 +130,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
 .btn {
   margin-top 1rem
 }

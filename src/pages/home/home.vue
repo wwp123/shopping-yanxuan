@@ -66,7 +66,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
 #head {
   height 3.1rem
 }

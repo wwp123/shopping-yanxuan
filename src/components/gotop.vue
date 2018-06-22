@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
 .gotop {
   display inline-block
   width 1.7rem

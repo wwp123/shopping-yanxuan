@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/vue-login')
+mongoose.connect('mongodb://localhost/yanxuanMongo')
 
 let db = mongoose.connection
 // 防止Mongoose: mpromise 错误
@@ -19,7 +19,26 @@ const userSchema = mongoose.Schema({
   token: String,
   create_time: Date
 })
-
+const cartSchema = mongoose.Schema({
+  username: String,
+  cartGoods: [
+    {
+      id: String,
+      supId: String,
+      name: String,
+      pic: String,
+      price: Number,
+      sku: String,
+      num: Number,
+      checked: Boolean
+    }
+  ]
+})
 // 根据schema生成model
 const User = mongoose.model('User', userSchema)
-module.exports = User
+const Cart = mongoose.model('Cart', cartSchema)
+
+module.exports = {
+  User,
+  Cart
+}

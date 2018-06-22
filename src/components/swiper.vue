@@ -50,17 +50,4 @@ export default {
   }
 }
 
-.service-policy {
-  background-color #ffffff
-  font-size 0.6rem
-  display flex
-  justify-content space-evenly
-  padding 0.4rem 0
-
-  .iconfont {
-    font-size 0.6rem
-    color #b4282d
-    margin-right 0.15rem
-  }
-}
 </style>

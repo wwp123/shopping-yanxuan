@@ -1,9 +1,11 @@
 <template>
   <div>
     <div class="panel">
-      <div class="panel-hd">
-        <h1>购物车</h1>
-        <div class="panel-btn" v-if="cartGoodsNumber !== 0" @click="editorGoods($event)">编辑</div>
+      <div class="panel-hd h36">
+        <div class="isFixed">
+          <h1>购物车</h1>
+          <div class="panel-btn" v-if="cartGoodsNumber !== 0" @click="editorGoods($event)">编辑</div>
+        </div>
       </div>
       <div class="panel-bd">
         <div class="notice" v-if="totalPrice >= 88"><span>已满足免邮条件</span></div>
@@ -15,13 +17,13 @@
             <li v-for="(goods, index) in this.cartGoods" :key="index">
               <div class="key"><span class="checkbox" :checked="isShowEditor?editCheckedGoods[index]:goods.checked" @click="toggleChecked(goods,index)"><i class="iconfont icon-check"></i></span></div>
               <div class="info nowrap">
-                <router-link :to="{path:'/goodsDetail',query:{id:index}}"><img :src="goods.pic" alt=""></router-link>
+                <router-link :to="{path:'/goodsDetail',query:{id:goods.supId}}"><img :src="goods.pic" alt=""></router-link>
                 <div class="txt">
                   <h4>{{goods.name}}</h4>
                   <p class="des">{{goods.sku}}</p>
                   <div class="txtbtm">
                     <div class="count fr">
-                      <span @click="countGoodsNumber(goods,false)">-</span>
+                      <span @click="countGoodsNumber(goods,false)" :class="{disabled: goods.num === 1}">-</span>
                       <input type="number" v-model="goods.num" />
                       <span @click="countGoodsNumber(goods,true)">+</span>
                     </div>
@@ -86,7 +88,7 @@ export default {
     this.getAllGoodsPrice()
   },
   computed: {
-    ...mapState(['cartGoods', 'cartNumber', 'token']),
+    ...mapState(['cartGoods', 'token', 'username']),
     ...mapGetters(['cartGoodsNumber'])
   },
   methods: {
@@ -102,7 +104,7 @@ export default {
         }
         goods.num--
       }
-      this.$store.commit('ADD_TO_CART', this.$store.state.cartGoods)
+      this.$store.dispatch('updateCart', this.cartGoods)
       this.getSelectedNumber()
       this.getAllGoodsPrice()
     },
@@ -212,7 +214,7 @@ export default {
         }
       }
       this.editCheckedGoods = {...this.editCheckedGoods}
-      this.$store.commit('UPDATE_CART', this.cartGoods)
+      this.$store.dispatch('updateCart', this.cartGoods)
       this.hasSelectedAll()
       this.getSelectedNumber()
       this.getAllGoodsPrice()
@@ -221,7 +223,10 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" scoped>
+  .h36 {
+    height 1.8rem
+  }
   .panel {
     .panel-hd {
       background-color #fff
@@ -230,6 +235,9 @@ export default {
         right .5rem
         top 0
       }
+    }
+    .panel-bd {
+      padding-bottom 2rem
     }
     .panel-ft {
       bottom 2rem

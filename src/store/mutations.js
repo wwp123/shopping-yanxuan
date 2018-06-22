@@ -3,6 +3,7 @@ const OTHER_GOODS = 'OTHER_GOODS'
 const ALL_OTHER_GOODS = 'ALL_OTHER_GOODS'
 const GOODS_DETAIL = 'GOODS_DETAIL'
 const SEARCH_RESULT = 'SEARCH_RESULT'
+const MERGE_CART = 'MERGE_CART'
 const UPDATE_CART = 'UPDATE_CART'
 const LOGIN = 'LOGIN'
 const LOGOUT = 'LOGOUT'
@@ -23,6 +24,9 @@ export default {
   },
   [SEARCH_RESULT] (state, res) {
     state.searchResultData = {...res}
+  },
+  [MERGE_CART] (state, res) {
+    state.cartGoods = {...res}
   },
   [UPDATE_CART] (state, res) {
     state.cartGoods = {...res}

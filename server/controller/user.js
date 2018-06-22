@@ -1,4 +1,5 @@
-const User = require('../db.js')
+const DBOperator = require('../db.js')
+const User = DBOperator.User
 // 下面这两个包用来生成时间
 const moment = require('moment')
 const objectIdToTimestamp = require('objectid-to-timestamp')
@@ -12,7 +13,6 @@ const encrypt = (pwd) => {
   sha1.update(pwd)
   return sha1.digest('hex')
 }
-
 // 数据库的操作
 // 根据用户名查找用户
 const findUser = (username) => {

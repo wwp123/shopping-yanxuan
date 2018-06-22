@@ -33,8 +33,8 @@
       </div>
     </section>
     <section class="mt10" v-for="(item, index) in otherGoods" :key="index">
-      <a class="title" href="">{{item.title}}好物</a>
-      <Goods :goods='item.items' :class="'flex-item-2 descript-absolute'" :showMore="true"></Goods>
+      <h2 class="title">{{item.title}}好物</h2>
+      <Goods :goods='item.items' :class="'flex-item-2 descript-absolute'" :showMore="true" :moreRouter="item.modTitle"></Goods>
     </section>
     <aside>
       <span class="gift"></span>
