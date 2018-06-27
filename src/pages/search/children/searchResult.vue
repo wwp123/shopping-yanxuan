@@ -154,10 +154,10 @@ export default {
       this.goods = [
         ...this.goods.filter((value, index) => {
           if (this.minPrice !== null && this.minPrice !== '') {
-            if (value.price < this.minPrice) return false
+            if (parseFloat(value.price) < parseFloat(this.minPrice)) return false
           }
           if (this.maxPrice !== null && this.maxPrice !== '') {
-            if (value.price > this.maxPrice) return false
+            if (parseFloat(value.price) > parseFloat(this.maxPrice)) return false
           }
           return true
         })

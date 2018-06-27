@@ -1,8 +1,12 @@
-# shopping-yanxuan
+---
+title: shopping-yanxuan
+---
+ 
+## 技术栈
 
-> A Vue.js project
+vue2 + vue-cli + vuex + vue-router + webpack + ES6 + axios + stylus + mint-ui + koa + mongodb
 
-## Build Setup
+## 项目运行
 
 ``` bash
 # install dependencies
@@ -24,4 +28,8 @@ npm run unit
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 说明
+
+1. 本项目基于vue-cli搭建，利用token方式进行用户登录验证，并实现注册入库、读取用户等功能
+2. 本项目使用mongodb作为后台数据库
+
