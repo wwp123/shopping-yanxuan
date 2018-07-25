@@ -56,7 +56,7 @@ export default {
         document.documentElement.scrollTop ||
         document.body.scrollTop
       const offsetTop = document.querySelector('#head').offsetTop
-      if (scrollTop > offsetTop) {
+      if (scrollTop >= offsetTop) {
         this.isFixed = true
       } else {
         this.isFixed = false

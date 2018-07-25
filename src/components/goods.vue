@@ -65,8 +65,9 @@ export default {
       position relative
       color #333
       .img {
-        min-height 5rem
+        height 5rem
         background-color #f4f4f4
+        overflow hidden
       }
       .txt {
         position relative

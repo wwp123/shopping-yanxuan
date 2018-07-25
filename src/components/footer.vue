@@ -55,6 +55,9 @@ export default {
         &.router-link-active {
             color #b4282d
         }
+        p {
+          margin-top .15rem
+        }
       }
     }
   }

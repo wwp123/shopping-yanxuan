@@ -386,6 +386,7 @@ export default {
       line-height 2.2rem
       background-color #ffffff
       border-top 1px solid #c7c7c7
+      overflow hidden
       z-index 90
       .key {
         flex-basis 3.3rem
