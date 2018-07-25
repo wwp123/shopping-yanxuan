@@ -1,6 +1,11 @@
 
+![预览图][1]
 
-<a href="https://wwp123.github.io/shopping-yanxuan/dist/#/home" target="_blank">戳我可以进行预览哦~</a>
+
+  [1]: src/assets/images/preview.jpg "预览图.jpg"
+  手机请扫二维码进行预览
+  
+<a href="https://wwp123.github.io/shopping-yanxuan/dist/#/home" target="_blank">PC端可直接戳我进行预览哦~</a>
 
 ## 技术栈
 
