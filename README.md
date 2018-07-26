@@ -7,6 +7,8 @@
   
 <a href="https://wwp123.github.io/shopping-yanxuan/dist/#/home" target="_blank">PC端可直接戳我进行预览哦~</a>
 
+==注意== 因为无法搭建服务端，所以此预览无法进行注册和登录，建议下载食用更美味哦~
+
 ## 技术栈
 
 vue2 + vue-cli + vuex + vue-router + webpack + ES6 + axios + stylus + mint-ui + koa + mongodb
